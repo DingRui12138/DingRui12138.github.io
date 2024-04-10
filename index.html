@@ -19,6 +19,7 @@
     <div class="canvas-wrapper"></div>
     <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/stats.js/r17/Stats.js"></script>
     <script src="./index.js"></script>
     <script>
       const canvasTable = new CanvasTable({
@@ -194,6 +195,20 @@
       }, 500)
 
       console.log('🚀 ~ canvasTable instance:', canvasTable)
+
+      const stats = new Stats()
+
+      stats.showPanel(2) // 0: fps, 1: ms, 2: mb, 3+: custom
+      document.body.appendChild(stats.dom)
+
+      function animate() {
+        stats.begin()
+        stats.end()
+
+        requestAnimationFrame(animate)
+      }
+
+      requestAnimationFrame(animate)
     </script>
   </body>
 </html>
