@@ -20,5 +20,180 @@
     <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./index.js"></script>
+    <script>
+      const canvasTable = new CanvasTable({
+        target: document.querySelector('.canvas-wrapper'),
+        columns: [
+          {
+            name: 'fixedLeft',
+            key: 'fixedLeft',
+            fixed: 'left',
+            children: [
+              {
+                name: 'fixedLeftChild_1',
+                key: 'fixedLeftChild_1',
+                children: [
+                  {
+                    name: 'fixedLeftChild_1_1',
+                    key: 'fixedLeftChild_1_1',
+                  },
+                ],
+              },
+              {
+                name: 'fixedLeftChild_2',
+                key: 'fixedLeftChild_2',
+              },
+            ],
+          },
+          {
+            name: 'fixedRight',
+            key: 'fixedRight',
+            fixed: 'right',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name2',
+            key: 'key2',
+            children: [
+              {
+                name: 'child_1',
+                key: 'child_1',
+                width: 200,
+              },
+              {
+                name: 'child_2',
+                key: 'child_2',
+                children: [
+                  {
+                    name: 'child_2_1',
+                    key: 'child_2_1',
+                  },
+                  {
+                    name: 'child_2_2',
+                    key: 'child_2_2',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: 'name3',
+            key: 'key3',
+            width: 200,
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+          {
+            name: 'name1',
+            key: 'key1',
+          },
+        ],
+        tableData: [],
+      })
+
+      const mockData = Array(4_0000)
+        .fill(0)
+        .map((_, idx) => {
+          return Object.create(null)
+        })
+      setTimeout(() => {
+        canvasTable.setTableData(mockData)
+      }, 500)
+
+      console.log('🚀 ~ canvasTable instance:', canvasTable)
+    </script>
   </body>
 </html>
