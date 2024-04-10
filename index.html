@@ -19,7 +19,7 @@
     <div class="canvas-wrapper"></div>
     <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/stats.js/r17/Stats.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/7/Stats.min.js"></script>
     <script src="./index.js"></script>
     <script>
       const canvasTable = new CanvasTable({
@@ -185,7 +185,7 @@
         tableData: [],
       })
 
-      const mockData = Array(4_0000)
+      const mockData = Array(40_0000)
         .fill(0)
         .map((_, idx) => {
           return Object.create(null)
